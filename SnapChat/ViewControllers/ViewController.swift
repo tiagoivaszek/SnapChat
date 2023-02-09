@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         
         autenticacao.addStateDidChangeListener { autenticacao, usuario in
             
-            if let usuarioLogado = usuario {
+            if usuario != nil {
                 
                 self.performSegue(withIdentifier: "loginAutomaticoSegue", sender: nil)
                 
